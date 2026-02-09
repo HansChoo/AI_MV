@@ -1,7 +1,7 @@
 import React from 'react';
 import { Palette, Users, Film, Wand2, Smartphone, MonitorPlay } from 'lucide-react';
 
-const FeatureCard = ({ icon: Icon, title, description, color }: { icon: any, title: string, description: string, color: string }) => (
+const FeatureCard = ({ icon: Icon, title, description, color }: { icon: React.ElementType, title: string, description: string, color: string }) => (
   <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 group">
     <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${color}`}>
       <Icon size={28} className="text-white" />
