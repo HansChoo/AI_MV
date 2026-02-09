@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>헤마스튜디오 - Make My Song with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Pretendard', 'sans-serif'],
+            },
+            colors: {
+              hema: {
+                purple: '#6200EE',
+                violet: '#7F5AF0',
+                blue: '#4579F5',
+                mint: '#50E3C2',    /* Updated Mint for Title */
+                dark: '#16161A',
+                light: '#FFFFFE',
+                grey: '#F4F4F6',
+                point: '#50E3C2'    /* Point is now Mint for emphasis in Hero */
+              }
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(135deg, #4A00E0 0%, #2A75FF 100%)', /* Vibrant Purple to Blue */
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Pretendard', sans-serif;
+        background-color: #ffffff;
+        color: #16161A;
+        -webkit-font-smoothing: antialiased;
+      }
+      .container-custom {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .text-mint-gradient {
+        background: linear-gradient(to right, #50E3C2, #2DE1FC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
