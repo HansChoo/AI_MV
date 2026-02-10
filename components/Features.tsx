@@ -30,37 +30,37 @@ const Features = () => {
             icon={Film}
             color="bg-purple-500"
             title="스토리텔링 기획"
-            description="단순 이미지가 나열되는 영상이 아닙니다. 기승전결이 있는 시나리오를 설계하여 곡의 몰입도를 극대화합니다."
+            description="기승전결이 있는 시나리오로 곡의 몰입도를 극대화합니다."
           />
           <FeatureCard 
             icon={Users}
             color="bg-blue-500"
             title="캐릭터 일관성"
-            description="딥러닝 고정 시드(Seed) 기술로 주인공의 얼굴과 의상이 영상 내내 변하지 않고 유지됩니다."
+            description="고정 시드(Seed) 기술로 주인공의 얼굴과 의상을 유지합니다."
           />
           <FeatureCard 
             icon={Palette}
             color="bg-indigo-500"
             title="무한한 스타일"
-            description="지브리풍 애니메이션부터 실사 영화, 3D 아트웍까지. 장르에 구애받지 않고 원하는 화풍을 구현합니다."
+            description="애니메이션, 실사, 3D 등 장르 불문 모든 화풍을 구현합니다."
           />
           <FeatureCard 
             icon={Wand2}
             color="bg-pink-500"
             title="정교한 연출 제어"
-            description="'비 내리는 창가', '눈물을 흘리는 주인공' 등 디테일한 상황 묘사와 감정 연출이 가능합니다."
+            description="디테일한 상황 묘사와 섬세한 감정 연출이 가능합니다."
           />
           <FeatureCard 
             icon={MonitorPlay}
             color="bg-orange-500"
             title="선명한 고화질"
-            description="유튜브, 방송 송출에도 손색없는 선명한 고화질로 최종 마스터링하여 전달드립니다."
+            description="방송 송출 가능한 고화질 마스터링 파일을 제공합니다."
           />
           <FeatureCard 
             icon={Smartphone}
             color="bg-teal-500"
             title="숏폼 최적화"
-            description="틱톡, 릴스, 쇼츠용 9:16 비율 세로 영상 포맷도 기본으로 지원합니다."
+            description="유튜브 쇼츠, 릴스용 9:16 세로 영상도 지원합니다."
           />
         </div>
       </div>

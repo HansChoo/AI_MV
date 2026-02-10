@@ -9,11 +9,11 @@ const Item = ({ question, answer }: { question: string, answer: string }) => {
                 className="w-full py-6 flex justify-between items-center text-left hover:text-hema-purple transition-colors group"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className={`text-lg font-bold pr-8 transition-colors ${isOpen ? 'text-hema-purple' : 'text-gray-900 group-hover:text-hema-purple'}`}>{question}</span>
+                <span className={`text-lg font-bold pr-8 transition-colors break-keep leading-tight ${isOpen ? 'text-hema-purple' : 'text-gray-900 group-hover:text-hema-purple'}`}>{question}</span>
                 {isOpen ? <ChevronUp className="text-hema-purple shrink-0" /> : <ChevronDown className="text-gray-400 group-hover:text-hema-purple shrink-0" />}
             </button>
             {isOpen && (
-                <div className="pb-8 text-gray-500 leading-relaxed bg-gray-50/50 p-6 rounded-xl mb-4">
+                <div className="pb-8 text-gray-500 leading-relaxed bg-gray-50/50 p-6 rounded-xl mb-4 break-keep">
                     {answer}
                 </div>
             )}
@@ -26,8 +26,8 @@ const FAQ = () => {
     <section className="py-24 bg-white">
       <div className="container-custom max-w-3xl">
         <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
-            <p className="text-gray-500">고객님들이 가장 많이 궁금해하시는 내용을 모았습니다.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 break-keep">자주 묻는 질문</h2>
+            <p className="text-gray-500 break-keep">고객님들이 가장 많이 궁금해하시는 내용을 모았습니다.</p>
         </div>
         
         <div className="space-y-1">

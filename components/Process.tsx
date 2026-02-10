@@ -38,7 +38,7 @@ const Process = () => {
       <div className="container-custom">
         <div className="mb-10 md:mb-16 text-center">
             <span className="text-hema-purple font-bold tracking-wider text-xs md:text-sm uppercase mb-2 block">Work Process</span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 break-keep">
                 복잡한 과정은 <span className="text-hema-purple">NO!</span><br/>
                 쉽고 빠른 제작 프로세스
             </h2>

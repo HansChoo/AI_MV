@@ -4,7 +4,6 @@ import Stats from './components/Stats';
 import Features from './components/Features';
 import Comparison from './components/Comparison';
 import Process from './components/Process';
-import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -25,26 +24,25 @@ const App = () => {
         <Stats />
         <Features />
         <Comparison />
-        <Gallery />
         <Pricing />
         <Process />
         <Testimonials />
         <FAQ />
         
         {/* Bottom CTA */}
-        <section className="bg-hero-gradient py-24 text-center text-white relative overflow-hidden">
-            <div className="container-custom relative z-10">
-                <h2 className="text-4xl font-bold mb-6">
+        <section className="bg-hero-gradient py-20 md:py-24 text-center text-white relative overflow-hidden">
+            <div className="container-custom relative z-10 px-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight break-keep">
                     아직 고민되시나요?<br/>
                     전문 매니저가 도와드릴게요.
                 </h2>
-                <p className="text-lg opacity-90 mb-10 max-w-xl mx-auto">
-                    내 음악에 딱 맞는 스타일 추천부터 견적 산출까지,<br/> 
+                <p className="text-base md:text-lg opacity-90 mb-10 max-w-xl mx-auto leading-relaxed break-keep">
+                    내 음악에 딱 맞는 스타일 추천부터<br className="md:hidden" /> 견적 산출까지,<br className="hidden md:block"/>
                     부담 없이 1:1로 물어보세요.
                 </p>
                 <button 
                     onClick={handleConsultClick}
-                    className="bg-hema-mint text-hema-dark px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-xl cursor-pointer"
+                    className="bg-hema-mint text-hema-dark px-10 py-5 rounded-full font-bold text-lg md:text-xl hover:scale-105 transition-transform shadow-xl cursor-pointer break-keep"
                 >
                     카카오톡 무료 상담하기
                 </button>

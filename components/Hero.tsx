@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   const handlePortfolioClick = () => {
-    const portfolioSection = document.getElementById('showcase');
+    const portfolioSection = document.getElementById('pricing'); // Updated to point to Pricing/Portfolio merged section
     if (portfolioSection) {
         portfolioSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -41,8 +41,8 @@ const Hero = () => {
       <div className="container-custom relative z-10 flex flex-col items-center text-center h-full justify-center">
         
         {/* New Subtitle Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-hema-mint font-bold text-sm md:text-base mb-6 animate-fade-in shadow-[0_0_10px_rgba(80,227,194,0.2)]">
-           <span className="relative flex h-2 w-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-hema-mint font-bold text-sm md:text-base mb-6 animate-fade-in shadow-[0_0_10px_rgba(80,227,194,0.2)] break-keep whitespace-nowrap">
+           <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-hema-mint opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-hema-mint"></span>
             </span>
@@ -248,7 +248,7 @@ const Hero = () => {
         <div className="relative z-30 flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-[220px] md:mt-0">
           <button 
             onClick={handleConsultClick}
-            className="bg-hema-mint text-hema-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3CD4B0] transition-all shadow-[0_0_20px_rgba(80,227,194,0.4)] hover:shadow-[0_0_30px_rgba(80,227,194,0.6)] transform hover:-translate-y-1 cursor-pointer active:scale-95"
+            className="bg-hema-mint text-hema-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3CD4B0] transition-all shadow-[0_0_20px_rgba(80,227,194,0.4)] hover:shadow-[0_0_30px_rgba(80,227,194,0.6)] transform hover:-translate-y-1 cursor-pointer active:scale-95 break-keep"
           >
             무료 상담 신청하기
           </button>
