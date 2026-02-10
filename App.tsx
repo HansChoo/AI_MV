@@ -2,16 +2,21 @@ import React from 'react';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import Features from './components/Features';
-import Styles from './components/Styles';
 import Comparison from './components/Comparison';
 import Process from './components/Process';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+// Footer removed
 
 const App = () => {
+  const handleConsultClick = () => {
+      if (window.confirm("카카오톡 채널로 이동하여 무료 상담을 진행합니다.")) {
+          window.location.href = "http://pf.kakao.com/_PKavxd/chat";
+      }
+  };
+
   return (
     <div className="min-h-screen font-sans selection:bg-hema-purple selection:text-white">
       {/* Header Removed as requested */}
@@ -19,7 +24,6 @@ const App = () => {
         <Hero />
         <Stats />
         <Features />
-        <Styles />
         <Comparison />
         <Gallery />
         <Pricing />
@@ -31,14 +35,18 @@ const App = () => {
         <section className="bg-hero-gradient py-24 text-center text-white relative overflow-hidden">
             <div className="container-custom relative z-10">
                 <h2 className="text-4xl font-bold mb-6">
-                    이제 당신의 음악을<br/>보여줄 차례입니다.
+                    아직 고민되시나요?<br/>
+                    전문 매니저가 도와드릴게요.
                 </h2>
                 <p className="text-lg opacity-90 mb-10 max-w-xl mx-auto">
-                    망설이지 마세요. 지금 상담 신청하시면<br/> 
-                    캐릭터 시안 3종을 무료로 받아보실 수 있습니다.
+                    내 음악에 딱 맞는 스타일 추천부터 견적 산출까지,<br/> 
+                    부담 없이 1:1로 물어보세요.
                 </p>
-                <button className="bg-hema-mint text-hema-dark px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-xl">
-                    무료 시안 신청하기
+                <button 
+                    onClick={handleConsultClick}
+                    className="bg-hema-mint text-hema-dark px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-xl cursor-pointer"
+                >
+                    카카오톡 무료 상담하기
                 </button>
             </div>
             {/* Decorative circles */}
@@ -46,7 +54,7 @@ const App = () => {
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none"></div>
         </section>
       </main>
-      <Footer />
+      {/* Footer component removed */}
     </div>
   );
 };

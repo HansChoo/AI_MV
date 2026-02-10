@@ -3,21 +3,35 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
+  const handleConsultClick = () => {
+    // Simple direct navigation or confirm
+    if (window.confirm("카카오톡 채널로 이동하여 무료 상담을 진행합니다.")) {
+        window.location.href = "http://pf.kakao.com/_PKavxd/chat";
+    }
+  };
+
+  const handlePortfolioClick = () => {
+    const portfolioSection = document.getElementById('showcase');
+    if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full min-h-[100dvh] overflow-hidden bg-[#0a0a0f] text-white flex flex-col justify-center items-center py-20 md:py-0">
       
       {/* 1. Ultra-Premium Background */}
       {/* Base Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] opacity-80 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] opacity-80 z-0 pointer-events-none"></div>
       
-      {/* Aurora Effects */}
-      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-hema-purple opacity-20 rounded-full blur-[150px] animate-pulse"></div>
-      <div className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] bg-hema-mint opacity-10 rounded-full blur-[150px] animate-pulse delay-1000"></div>
-      <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600 opacity-20 rounded-full blur-[100px]"></div>
+      {/* Aurora Effects - Added pointer-events-none */}
+      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-hema-purple opacity-20 rounded-full blur-[150px] animate-pulse pointer-events-none"></div>
+      <div className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] bg-hema-mint opacity-10 rounded-full blur-[150px] animate-pulse delay-1000 pointer-events-none"></div>
+      <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600 opacity-20 rounded-full blur-[100px] pointer-events-none"></div>
 
       {/* Grid Pattern */}
       <div 
-        className="absolute inset-0 z-0 opacity-[0.03]" 
+        className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
         style={{ 
             backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)', 
             backgroundSize: '60px 60px' 
@@ -35,27 +49,33 @@ const Hero = () => {
            AI로 만드는 나만의 뮤직비디오!
         </div>
 
-        {/* Main Title */}
-        <h1 className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black leading-[1.1] md:leading-tight tracking-tighter mb-8 drop-shadow-2xl italic w-full">
+        {/* Main Title - Updated with Sophisticated Gradients & Fix for Italic Clipping */}
+        <h1 className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black leading-[1.1] md:leading-tight tracking-tighter mb-8 italic w-full drop-shadow-2xl py-2">
           <span className="block md:inline md:whitespace-nowrap">
-            <span className="text-hema-mint">Make</span>{" "}
-            <span className="text-white">My M/V</span>
+            {/* Gradient 1: Mint to Blue - Added pr-4 to prevent clipping */}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#50E3C2] via-[#4579F5] to-[#4579F5] pr-4">Make</span>{" "}
+            
+            {/* White with Glow */}
+            <span className="text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">My M/V</span>
+            
             <span className="hidden md:inline">&nbsp;</span>
             <br className="md:hidden" />
-            <span className="text-hema-mint">with AI</span>
-            <span className="text-hema-mint align-top text-3xl md:text-6xl ml-1 relative -top-2 md:-top-4 animate-spin-slow inline-block">✦</span>
+            
+            {/* Gradient 2: Blue to Purple - Added pr-4 to prevent clipping */}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4579F5] via-[#7F5AF0] to-[#9F7AEA] pr-4">with AI</span>
+            
+            {/* Star Icon - Mint Glow */}
+            <span className="text-[#50E3C2] align-top text-3xl md:text-6xl ml-1 relative -top-2 md:-top-4 animate-spin-slow inline-block drop-shadow-[0_0_15px_rgba(80,227,194,0.8)]">✦</span>
           </span>
         </h1>
 
         {/* 2. "Audio -> AI -> Video" Transformation Graphic */}
-        {/* Mobile: Absolute Background style (Large, Centered, Opacity) */}
-        {/* Desktop: Relative In-flow style */}
         <div className={`
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
             w-[180%] md:w-full max-w-none md:max-w-[1000px] md:h-auto
             opacity-60 md:opacity-100 
-            z-[-1] md:z-auto 
-            pointer-events-none md:pointer-events-auto
+            z-0 
+            pointer-events-none
             
             md:relative md:top-auto md:left-auto md:translate-x-0 md:translate-y-0
             md:mb-10 md:px-0
@@ -225,11 +245,17 @@ const Hero = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-[220px] md:mt-0">
-          <button className="bg-hema-mint text-hema-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3CD4B0] transition-all shadow-[0_0_20px_rgba(80,227,194,0.4)] hover:shadow-[0_0_30px_rgba(80,227,194,0.6)] transform hover:-translate-y-1">
+        <div className="relative z-30 flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-[220px] md:mt-0">
+          <button 
+            onClick={handleConsultClick}
+            className="bg-hema-mint text-hema-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3CD4B0] transition-all shadow-[0_0_20px_rgba(80,227,194,0.4)] hover:shadow-[0_0_30px_rgba(80,227,194,0.6)] transform hover:-translate-y-1 cursor-pointer active:scale-95"
+          >
             무료 상담 신청하기
           </button>
-          <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+          <button 
+            onClick={handlePortfolioClick}
+            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+          >
             포트폴리오 보기
             <ChevronRight size={18} />
           </button>
